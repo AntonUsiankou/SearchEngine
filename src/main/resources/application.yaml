@@ -1,4 +1,20 @@
 # example values
+spring:
+  profiles:
+    active: debug
+  datasource:
+    url: jdbc:postgresql://localhost:5432/searchEngine
+    username: skillbox
+    password: skillbox
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate,ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    drop-first: false
+
 
 indexing-settings:
   sites:
